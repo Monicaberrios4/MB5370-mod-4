@@ -683,7 +683,22 @@ ggplot() +
   theme_minimal()
 ```
 ```{r}
-# PARA ASSIGNMENT: Link tu github, analiza tu graph, y sube tu Q Fish, haz los cuadrados rojos del workshop 3 y acaba workshop 4
+# Spatial Data ####
+
+# install and load your packages
+#load into R library
+library(tidyverse)
+library(sf) # simple features
+library (terra) # for raster
+library(tmap) # Thematic maps are geographical maps in which spatial data distributions are visualized
+
+# 1. Download and load dataset: 
+library(readr)
+dat <- read_csv("data/data-for-course/copepods_raw.csv")
+dat
+
+```
+```{r}
 
 ```
 
