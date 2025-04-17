@@ -647,11 +647,43 @@ ggsave("my-plot.pdf")
 
 ```{r}
 # Assignment ####
-head(Qfish)
+# 1. Obtain data; Go to QFISH and review all of the available datasets that you could analyse
+fishing_data <- read_csv("data/Qfish.csv")
+head(fishing_data)
 ```
 ```{r}
+#2. Tidy the data using tidyverse:
+library(tidyverse)
 
+# Data cleaning:
+fishing_data_clean$Tonnes <- gsub(",", "", fishing_data_clean$Tonnes)
+fishing_data_clean$Tonnes <- as.numeric(fishing_data_clean$Tonnes)
+head(fishing_data_clean)
+```
+```{r}
+# Remove the outlier (Tonnes max value)
+qfish_no_outlier <- Qfish[Qfish$Tonnes <max(Qfish$Tonnes, na.rm = TRUE),]
 
+#Create Scatter Plot:
+ggplot() +
+  geom_point(data = qfish_no_outlier, aes(x = Licences, y = Tonnes, color = "Catch Data"),
+      alpha = 0.8, size = 1.5) +
+  geom_smooth(data = qfish_no_outlier, aes(x= Licences, y = Tonnes, colour = "Trendline"),
+             method = "gam", se = FALSE, size = 1) +
+  scale_color_manual(
+    name = "Legend",
+    values = c("Catch Data"= "darkblue", "Trendline"= "red")
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0.1, 0.15))) +
+  labs(
+    title = "Relationship Between Number of Licenses and Tonnes of Catch",
+    x = "Number of Licenses",
+    y = "Tonnes of Catch"
+  ) +
+  theme_minimal()
+```
+```{r}
+# PARA ASSIGNMENT: Link tu github, analiza tu graph, y sube tu Q Fish, haz los cuadrados rojos del workshop 3 y acaba workshop 4
 
 ```
 
