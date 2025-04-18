@@ -9,6 +9,8 @@ date: "2025-04-17"
 # 1. Obtain data; Go to QFISH and review all of the available datasets that you could analyse
 fishing_data <- read_csv("data/Qfish.csv")
 head(fishing_data)
+
+# This dataset includes annual catch tonnage and the number of fishing licenses issued. The goal was to explore how the number of licenses correlates with catch quantity over time.
 ```
 ```{r}
 #2. Tidy the data using tidyverse:
