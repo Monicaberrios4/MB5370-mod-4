@@ -45,7 +45,3 @@ ggplot() +
 # Analysis:
 # The scatter plot illustrates the relationship between the number of fishing licenses and the total catch in tonnes, showing a clear non-linear trend. Initially, as the number of licenses increases, the catch also rises, suggesting that more fishers contribute to a higher total yield. However, beyond approximately 700 licenses, the trendline peaks and then declines sharply, indicating that additional licenses may lead to reduced catch. This pattern could reflect overfishing, increased competition among fishers, or a limit to the ecosystem's productivity. The generalized additive model (GAM) effectively captures this non-linear relationship, emphasizing the importance of managing license numbers to avoid surpassing the point where catch rates begin to fall.
 
-```{r}
-```
-
-
