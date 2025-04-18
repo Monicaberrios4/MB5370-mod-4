@@ -4,7 +4,7 @@ output: html_document
 date: "2025-04-05"
 ---
 
-```{r}
+```{r WORKSHOP 1}
 ## Load packages ####
 library(tidyverse)
 ```
@@ -384,7 +384,7 @@ ggplot(data = <DATA>) +
   <FACET_FUNCTION>
 ```
 
-```{r}
+```{r PLOT DECONSTRUCTION}
 # Workbook Assignment####
 ## Load libraries
 library(ggplot2)
@@ -449,8 +449,8 @@ ggplot(damage_data, aes(x = reorder(Group, Plot_Value), y = Plot_Value, fill = T
 
 ```
 
-```{r}
-# Using ggplot for cummunication; labels ####
+```{r WORKSHOP 2}
+# Using ggplot for communication; labels ####
 
 # In ggplot, you add labels with the labs() function
 # Let's add a title:
@@ -682,7 +682,7 @@ ggplot() +
   ) +
   theme_minimal()
 ```
-```{r}
+```{r WORKSHOP 3 AND 4}
 # Spatial Data ####
 
 # install and load your packages
@@ -796,6 +796,5 @@ tmap_save(
   tm = my_map,
   filename = "Copepod_Richness_Map.html"
 )
-
 ```
 
